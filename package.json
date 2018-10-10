@@ -55,12 +55,9 @@
   },
   "author": "Ajay NS <ajay.ns@outlook.com>",
   "license": "MIT",
-  "homepage": "https://devfolioco.github.io/react-otp-input",
+  "homepage": "https://github.com/ashuanindian/react-otp-input",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devfolioco/react-otp-input"
-  },
-  "bugs": {
-    "url": "https://github.com/devfolioco/react-otp-input/issues"
+    "url": "https://github.com/ashuanindian/react-otp-input"
   }
 }
