@@ -46,6 +46,7 @@ class SingleOtpInput extends PureComponent<*> {
     if (input && focus && shouldAutoFocus) {
       input.focus();
     }
+    input && document.addEventListener('keydown', this.onKeyPressed);
   }
 
   componentDidUpdate(prevProps) {
@@ -63,6 +64,18 @@ class SingleOtpInput extends PureComponent<*> {
   }
 
   getClasses = (...classes) => classes.filter(c => !isStyleObject(c) && c !== false).join(' ');
+
+  onKeyPressed(e) {
+    console.log(e.key);
+    const invalidChars = [
+      "-",
+      "+",
+      "e",
+    ];
+    if (invalidChars.includes(e.key)) {
+      e.preventDefault();
+    }
+  }
 
   render() {
     const {
