@@ -107,7 +107,10 @@ class SingleOtpInput extends PureComponent<*> {
             hasErrored && errorStyle
           )}
           type="number"
+          min="0"
           maxLength="1"
+          inputmode="numeric" 
+          pattern="[0-9]*"
           ref={input => {
             this.input = input;
           }}
