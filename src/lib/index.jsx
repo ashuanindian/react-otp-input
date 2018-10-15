@@ -66,7 +66,6 @@ class SingleOtpInput extends PureComponent<*> {
   getClasses = (...classes) => classes.filter(c => !isStyleObject(c) && c !== false).join(' ');
 
   onKeyPressed(e) {
-    console.log(e.key);
     const invalidChars = [
       "-",
       "+",
@@ -74,6 +73,15 @@ class SingleOtpInput extends PureComponent<*> {
     ];
     if (invalidChars.includes(e.key)) {
       e.preventDefault();
+      return;
+    }
+    if(e.target.value.length > 1) {
+      e.preventDefault();
+      return;
+    }
+    if(isNaN(e.target.value)) {
+      e.preventDefault();
+      return;
     }
   }
 
