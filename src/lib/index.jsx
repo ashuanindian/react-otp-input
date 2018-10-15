@@ -109,7 +109,7 @@ class SingleOtpInput extends PureComponent<*> {
           type="tel"
           min="0"
           maxLength="1"
-          inputmode="numeric" 
+          inputMode="numeric" 
           pattern="[0-9]*"
           ref={input => {
             this.input = input;
