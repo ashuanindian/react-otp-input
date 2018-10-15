@@ -106,7 +106,7 @@ class SingleOtpInput extends PureComponent<*> {
             isDisabled && disabledStyle,
             hasErrored && errorStyle
           )}
-          type="number"
+          type="tel"
           min="0"
           maxLength="1"
           inputmode="numeric" 
