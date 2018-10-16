@@ -46,7 +46,7 @@ class SingleOtpInput extends PureComponent<*> {
     if (input && focus && shouldAutoFocus) {
       input.focus();
     }
-    input && document.addEventListener('keydown', this.onKeyPressed);
+    input && input.addEventListener('keydown', this.onKeyPressed);
   }
 
   componentDidUpdate(prevProps) {
@@ -79,7 +79,7 @@ class SingleOtpInput extends PureComponent<*> {
       e.preventDefault();
       return;
     }
-    if(isNaN(e.target.value)) {
+    if(isNaN(e.key)) {
       e.preventDefault();
       return;
     }
@@ -277,7 +277,7 @@ class OtpInput extends Component<Props, State> {
           disabledStyle={disabledStyle}
           hasErrored={hasErrored}
           errorStyle={errorStyle}
-          shouldAutoFocus={shouldAutoFocus}
+          shouldautofocus={shouldAutoFocus}
         />
       );
     }
